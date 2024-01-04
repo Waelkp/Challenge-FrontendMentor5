@@ -1,0 +1,99 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  /* ## Colors */
+  /* ### Primary */
+  --Yellow: hsl(47, 88%, 63%);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 50%);
+  --Black: hsl(0, 0%, 7%);
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: var(--Yellow);
+}
+.holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 97vh;
+}
+.card {
+  background-color: white;
+  width: 375px;
+  padding: 18px;
+  border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 8px 8px 0 black;
+  color: hsl(0, 0%, 7%);
+  transition: 0.6s;
+  &:hover {
+    box-shadow: 15px 10px 0 black;
+  }
+}
+.card .imge {
+  overflow: hidden;
+  border-radius: 15px;
+}
+.card .imge img {
+  max-width: 100%;
+}
+.card section {
+  margin-top: 20px;
+}
+.card section span {
+  background-color: var(--Yellow);
+  padding: 5px 15px;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.card section > p:first-of-type {
+  font-size: 13px;
+  margin-top: 22px;
+}
+
+.card section > h2 {
+  cursor: pointer;
+  transition: 0.4s;
+  color: hsl(0, 0%, 7%);
+  &:hover {
+    color: var(--Yellow);
+  }
+}
+.card section > p:last-of-type {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--Grey);
+}
+.card section > footer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 800;
+}
+.card section > footer img {
+  height: 35px;
+}
+.card section > footer p {
+  font-size: 13px;
+}
+@media (max-width: 768px) {
+  .card {
+    width: 335px;
+  }
+  .card section > h2 {
+    font-size: 22px;
+  }
+  .card section > p:first-of-type {
+    font-size: 12px;
+  }
+  .card section > p:last-of-type {
+    font-size: 15px;
+  }
+}
